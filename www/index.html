@@ -62,6 +62,17 @@
         <!-- for your init code, see README and file comments for details -->
         <script src="xdk/init-dev.js"></script>
         <!-- normalizes device and document ready events, see file for details -->
+        <script>
+            function login () {
+                if (true) {
+                    document.getElementById("feedback").style.visibility = "visible";
+                } 
+            }
+        </script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     </head>
 
     <body>
@@ -70,47 +81,73 @@
                 visibility: hidden;
             } 
             body {
-                
-                
+                font-family: calibri;
+                font-weight: 100;
             }
         </style>
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
-        <div class="upage vertical-col left" id="mainpage">
-            <div class="well no_wrap  widget uib_w_6 d-margins Tela" data-uib="twitter%20bootstrap/well" data-ver="1">
-                <div class="col uib_col_1 single-col" data-uib="layout/col" data-ver="0">
-                    <div class="widget-container content-area vertical-col">
-                        <div class="table-thing widget uib_w_1 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
-                            <label class="narrow-control label-top-left">Nome:</label>
-                            <input class="wide-control form-control default" type="text">
-                        </div>
-                        <div class="table-thing widget uib_w_3 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
-                            <label class="narrow-control label-top-left">Sobrenome:</label>
-                            <input class="wide-control form-control default" type="text">
-                        </div>
-                        <div class="table-thing widget uib_w_4 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
-                            <label class="narrow-control label-top-left">Nascimento:</label>
-                            <input class="wide-control form-control default" type="date" placeholder=" ">
-                        </div>
-                        <div class="table-thing widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
-                            <label class="narrow-control label-top-left">Email:</label>
-                            <input class="wide-control form-control default" type="email">
-                        </div>
-                        <fieldset class="widget uib_w_7 d-margins" data-uib="twitter%20bootstrap/radio_group" data-ver="1" data-child-name="SouAdolescente">
-                            <label class="radio radio-padding-left widget uib_w_8" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
-                                <input type="radio" name="SouAdolescente">Sou Pai</label>
-                            <label class="radio radio-padding-left widget uib_w_9" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
-                                <input type="radio" name="SouAdolescente">Sou Adolescente</label>
-                        </fieldset>
+        <div class="upage" id="mainpage">
+            <div class="upage-content ac0 content-area vertical-col left" id="uib_page_2">
+                <div class="well no_wrap  widget uib_w_6 d-margins Tela" data-uib="twitter%20bootstrap/well" data-ver="1">
+                    <div class="col uib_col_1 single-col" data-uib="layout/col" data-ver="0">
+                        <div class="widget-container content-area vertical-col">
+                            <div class="table-thing widget uib_w_1 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                                <label class="narrow-control label-top-left">Nome:</label>
+                                <input class="wide-control form-control default" type="text">
+                            </div>
+                            <div class="table-thing widget uib_w_3 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                                <label class="narrow-control label-top-left">Sobrenome:</label>
+                                <input class="wide-control form-control default" type="text">
+                            </div>
+                            <div class="table-thing widget uib_w_4 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                                <label class="narrow-control label-top-left">Nascimento:</label>
+                                <input class="wide-control form-control default" type="date" placeholder=" ">
+                            </div>
+                            <div class="table-thing widget uib_w_10 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
+                                <label class="narrow-control label-top-left">Email:</label>
+                                <input class="wide-control form-control default" type="email">
+                            </div>
+                            <fieldset class="widget uib_w_7 d-margins" data-uib="twitter%20bootstrap/radio_group" data-ver="1" data-child-name="SouAdolescente">
+                                <label class="radio radio-padding-left widget uib_w_8" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
+                                    <input type="radio" name="SouAdolescente">Sou Pai</label>
+                                <label class="radio radio-padding-left widget uib_w_9" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
+                                    <input type="radio" name="SouAdolescente">Sou Adolescente</label>
+                            </fieldset>
 
-                        <button class="btn widget uib_w_2 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Login</button>
-                        <button class="btn widget uib_w_2 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Registrar-se</button><span class="uib_shim"></span>
+                            <button class="btn widget uib_w_2 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="login" onclick="login()">Login</button>
+                            
+                            <a href="Tudo/principal.html"> teste </a>
+                            
+                            <button class="btn widget uib_w_2 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Registrar-se</button><span class="uib_shim"></span>
+                            <div id="feedback" style="visibility: hidden">Logado com sucesso</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <div id="home" class="upage-content vertical-col left hidden">
+
+                <div class="panel widget uib_w_11 panel-default" data-uib="twitter%20bootstrap/collapsible" data-ver="1">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+           <a class="accordion-toggle" data-toggle="collapse" href="#bs-accordion-group-0" data-parent="#null">Collapsible</a>
+       </h4>
+                    </div>
+                    <div id="bs-accordion-group-0" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="col uib_col_3 single-col" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+                                    <span class="uib_shim"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="upage vertical-col left hidden" id="main"></div>
     </body>
 
 </html>
