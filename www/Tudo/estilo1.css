@@ -1,5 +1,7 @@
 body {
     font-family: calibri;
-    color: rebeccapurple;
-    background-color: royalblue;
+    font-size: 12;
+    font-weight: 100;
+    color: black;
+    background-color: lightgrey;
 }
