@@ -29,19 +29,19 @@ function atualizar(){
         var desk = document.getElementById("postar");
         var prin = document.createElement("div");
         var titl = document.createTextNode(title);
-        var auth = document.createTextNode(author);
-        var date = document.createTextNode(date);
+        var auto = document.createTextNode(author);
+        var data = document.createTextNode(date);
         var cont = document.createTextNode(content);
 
-        prin.id = "principal" + i;
+        prin.id = "postar" + i;
         titl.id = "titulo";
-        auth.id = "autor";
-        date.id = "data";
+        auto.id = "autor";
+        data.id = "data";
         cont.id = "conteudo";
 
         prin.appendChild(titl);
-        prin.appendChild(auth);
-        prin.appendChild(date);
+        prin.appendChild(auto);
+        prin.appendChild(data);
         prin.appendChild(cont);
         desk.appendChild(prin);
       }
