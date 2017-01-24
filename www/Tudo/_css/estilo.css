@@ -1,6 +1,5 @@
 body{
     background: url(_media/fundo-4.jpg);
-    background-size: cover;
     font-family: calibri;
     font-size: 12;
     font-weight: 100;
@@ -100,9 +99,8 @@ p#public_content{
 }
 /*Fim da edição*/
 
-
-
-div#top{
+/*Edição do Menu Principal*/
+div#div_top{
     text-align: right;
     top:0%;
     left:0%;
@@ -110,7 +108,7 @@ div#top{
     height: 10%;
 }
 
-div#menudiv{
+div#div_menu{
     background-color: black;
     color: white;
     position: absolute;
@@ -120,3 +118,4 @@ div#menudiv{
     top: 0%;
     transition: 100;
 }
+/*Fim da Edição*/

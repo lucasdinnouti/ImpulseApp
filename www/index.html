@@ -4,20 +4,19 @@
 
     <script>
         function menu() {
-            document.getElementById("menudiv").style.left= "0%";
+            document.getElementById("div_menu").style.left= "0%";
         }
         function voltar() {
-            document.getElementById("menudiv").style.left= "-30%";
+            document.getElementById("div_menu").style.left= "-30%";
         }
     </script>
 </head>
 <body>
-    <div id="top">
+    <div id="div_top">
         <h1>Impulse</h1>
-        <p align="left"><button onclick="menu()">Menu</button></p>
+        <p><button onclick="menu()">Menu</button></p>
     </div>
-
-    <div id="menudiv" align="center">
+    <div id="div_menu" align="center">
         <p align="center"><button onclick="voltar()">Voltar</button></p>
         
         <p><h2><a href="Tudo/publicacoes.html" target="corpo" onclick="voltar()">Postagens</a></h2></p>
