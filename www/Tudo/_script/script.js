@@ -25,6 +25,7 @@ function atualizar(){
         var date_data = json.posts[i].date;
         var content_data = json.posts[i].content;
 
+        //Cria  a publicação na página
         var div_principal = document.getElementById("post_page");
         var div_publicacao = document.createElement("div");
         var title_element = document.createElement("h1");
