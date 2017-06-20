@@ -1,13 +1,38 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
     <meta charset="utf-8"/>
 </head>
 <script type="text/javaScript" src="_script/script.js"></script>
 <body>
-    <div id="post_page">
-        <a href="home.html">Voltar</a>
-        <input id="send_public" type="submit" onclick="atualizar()"/>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Postagem simples
+        </div>
+        <div class="panel-body">
+            <form action="http://www.impulse-156418.appspot.com/posts/add" method="post">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Título</span>
+                  <input type="text" name="title" class="form-control"aria-describedby="basic-addon1">
+
+                  <span class="input-group-addon" id="basic-addon1">Autor</span>
+                  <input type="text" name="author" class="form-control" aria-describedby="basic-addon2">
+
+                  <span class="input-group-addon" id="basic-addon1">Data</span>
+                  <input type="text" name="date" class="form-control" aria-label="Data de publicação)">
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">Conteúdo</span>
+                  <input type="text" name="description" class="form-control" aria-label="texto da postagem">
+                </div>
+
+                <div class="input-group">
+                  <label for="basic-url">Postar</label>
+                  <input type="submit" class="form-control"aria-describedby="basic-addon3">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

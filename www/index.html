@@ -1,7 +1,10 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="Tudo/_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script>
         function menu() {
             document.getElementById("div_menu").style.left= "0%";
@@ -12,10 +15,17 @@
     </script>
 </head>
 <body>
-    <div id="div_top">
-        <h1>Impulse</h1>
-        <p><button onclick="menu()">Menu</button></p>
-    </div>
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+                <h1>Impulse App <small> um teste de subtítulo </small></h1>
+                <ul class="nav nav-pills nav-justified">
+                    <li><a styl="inherith" href="Tudo/publicacoes.html" target="corpo" onclick="voltar()">Postagens</a></li>
+                    <li><a href="Tudo/publicar.html" target="corpo" onclick="voltar()">Postar</a></li>
+                    <span class="glyphicon glyphicon-menu-hamburger" onclick="menu()" aria-hidden="true"></span>
+                </ul>
+            </div>
+        </div>
+        
     <div id="div_menu" align="center">
         <p align="center"><button onclick="voltar()">Voltar</button></p>
         
