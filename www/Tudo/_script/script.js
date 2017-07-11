@@ -3,7 +3,7 @@
 
 function atualizar(){
   var http = new XMLHttpRequest();
-  var url = "http://impulse-156418.appspot.com/lists/";
+  var url = "http://bookshelf.impulse-157223.appspot.com/lists/";
   var response_data;
 
   //Abre a url no obrjeto http
