@@ -1,38 +1,66 @@
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-    <meta charset="utf-8"/>
-</head>
-<script type="text/javaScript" src="_script/script.js"></script>
-<body>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            Postagem simples
-        </div>
-        <div class="panel-body">
-            <form action="http://bookshelf.impulse-157223.appspot.com/createSchedule" method="post">
-                <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">Título</span>
-                  <input type="text" name="title" class="form-control"aria-describedby="basic-addon1">
+	<head>
+		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+		<meta charset="utf-8"/>
+		<script type="text/javaScript" src="_script/script.js"></script>
+	</head>
+	<body>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Postagem simples
+			</div>
+			<div class="panel-body">
+				<!--        Estilo formulário de PHP
+<form action="http://bookshelf.impulse-157223.appspot.com/createSchedule" method="post">
+<div class="input-group">
+<span class="input-group-addon" id="basic-addon1">Título</span>
+<input type="text" name="title" class="form-control"aria-describedby="basic-addon1">
 
-                  <span class="input-group-addon" id="basic-addon1">Autor</span>
-                  <input type="text" name="author" class="form-control" aria-describedby="basic-addon2">
+<span class="input-group-addon" id="basic-addon1">Autor</span>
+<input type="text" name="author" class="form-control" aria-describedby="basic-addon2">
 
-                  <span class="input-group-addon" id="basic-addon1">Data</span>
-                  <input type="text" name="publishedDate" class="form-control" aria-label="Data de publicação">
-                </div>
+<span class="input-group-addon" id="basic-addon1">Data</span>
+<input type="text" name="publishedDate" class="form-control" aria-label="Data de publicação">
+</div>
 
-                <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">Conteúdo</span>
-                  <input type="text" name="description" class="form-control" aria-label="texto da postagem">
-                </div>
+<div class="input-group">
+<span class="input-group-addon" id="basic-addon1">Conteúdo</span>
+<input type="text" name="description" class="form-control" aria-label="texto da postagem">
+</div>
 
-                <div class="input-group">
-                  <label for="basic-url">Postar</label>
-                  <input type="submit" class="form-control"aria-describedby="basic-addon3">
-                </div>
-            </form>
-        </div>
-    </div>
-</body>
+<div class="input-group">
+<label for="basic-url">Postar</label>
+<input type="submit" class="form-control"aria-describedby="basic-addon3">
+</div>
+</form>
+-->
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">Título</span>
+					<input type="text" id="title" class="form-control"aria-describedby="basic-addon1"/>
+
+					<span class="input-group-addon" id="basic-addon1">Autor</span>
+					<input type="text" id="author" class="form-control" aria-describedby="basic-addon2"/>
+
+					<span class="input-group-addon" id="basic-addon1">Data</span>
+					<input type="text" id="publishedDate" class="form-control" aria-label="Data de publicação"/>
+				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">Conteúdo</span>
+					<input type="text" id="description" class="form-control" aria-label="texto da postagem"/>
+				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">Enviar</span>
+					<input type="submit" onclick="EnviarPost()" class="form-control"aria-describedby="basic-addon3"/>
+					<select id="kind">
+						<option value="Default"> Padrão </option>
+						<option value="Schedule"> Evento </option>
+						<option value="Survey" disabled="true"> Enquete </option>
+						<option value="File" disabled="true"> Arquivo </option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

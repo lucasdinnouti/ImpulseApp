@@ -1,41 +1,35 @@
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="Tudo/_css/estilo.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <meta charset="utf-8">
+	<head>
+		<link rel="stylesheet" type="text/css" href="Tudo/_css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<meta charset="utf-8">
 
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        function menu() {
-            document.getElementById("div_menu").style.left= "0%";
-        }
-        function voltar() {
-            document.getElementById("div_menu").style.left= "-30%";
-        }
-    </script>
-</head>
-<body>
-        <div class="navbar navbar-default">
-            <div class="container-fluid">
-                <h1>Impulse App <small> um teste de subtítulo </small></h1>
-                <ul class="nav nav-pills nav-justified">
-                    <li><a style="inherith" href="Tudo/publicacoes.html" target="corpo" onclick="voltar()">Postagens</a></li>
-                    <li><a href="Tudo/publicar.html" target="corpo" onclick="voltar()">Postar</a></li>
-                    <span class="glyphicon glyphicon-menu-hamburger" onclick="menu()" aria-hidden="true"></span>
-                </ul>
-            </div>
-        </div>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			function menu() {
+				document.getElementById("div_menu").style.left= "0%";
+			}
+			function voltar() {
+				document.getElementById("div_menu").style.left= "-30%";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+			<div class="container-fluid">
+				<h1>Impulse App <small> um teste de subtítulo </small></h1>
+				<ul class="nav nav-pills nav-justified">
+					<li><a style="inherith" href="Tudo/publicacoes.html" target="corpo" onclick="voltar()">Postagens</a></li>
+					<li><a href="Tudo/publicar.html" target="corpo" onclick="voltar()">Postar</a></li>
+					<span class="glyphicon glyphicon-menu-hamburger" onclick="menu()" aria-hidden="true"></span>
+				</ul>
+			</div>
+		</div>
+		<div id="div_menu" align="center">
+			<p align="center"><button onclick="voltar()">Voltar</button></p>
+		</div>
+		<iframe height="85%" width="100%" name="corpo">
 
-    <div id="div_menu" align="center">
-        <p align="center"><button onclick="voltar()">Voltar</button></p>
-
-    </div>
-
-    <iframe height="85%" width="100%" name="corpo">
-
-    </iframe>
-
-
-
-</body>
+		</iframe>
+	</body>
 </html>
