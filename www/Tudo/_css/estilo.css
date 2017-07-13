@@ -66,9 +66,41 @@ div#public_page p{
 
 /*Edição do Pedidos*/
 .div-postar{
+  font-family: 'Amiko', sans-serif;
   display: block;
 }
-
+.panel-body{
+  background-color: #bbb;
+  margin: auto;
+  width: 60vh;
+  font-family: 'Amiko', sans-serif;
+}
+.select-tipo-publicacao{
+  border-style: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  width: 40vh;
+  line-height: 0px;
+  font-family: 'Amiko', sans-serif;
+}
+.input-postagem{
+  margin: 1vh;
+  border: .2vh #000 solid;
+  border-radius: 1vh;
+  height: 5vh;
+  width: 50vh;
+  font-family: 'Amiko', sans-serif;
+}
+.textarea-postagem{
+  margin: 1vh;
+  border: .2vh #000 solid;
+  border-radius: 1vh;
+  width: 50vh;
+  height: 20vh;
+  resize: none;
+  font-family: 'Amiko', sans-serif;
+}
 
 div#event-options{
   display: none;

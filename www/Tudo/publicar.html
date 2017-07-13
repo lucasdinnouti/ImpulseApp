@@ -35,11 +35,11 @@
 </div>
 </form>
 -->
-				<select id="kind" onchange="addDay(this)">
-					<option value="Default"> Padrão </option>
-					<option value="Schedule"> Evento </option>
-					<option value="Survey" disabled="true"> Enquete </option>
-					<option value="File" disabled="true"> Arquivo </option>
+				<select id="kind" class="select-tipo-publicacao" onchange="addDay(this)">
+					<option value="Default"> Publicação Padrão </option>
+					<option value="Schedule"> Publicação de Evento </option>
+					<option value="Survey" disabled="true"> Publicação de Enquete </option>
+					<option value="File" disabled="true"> Publicação de Arquivo </option>
 				</select>
 				<script type="text/javascript">
 					function addDay(selectObject){
@@ -52,32 +52,25 @@
 					}
 				</script>
 				<div class="div-postagem">
-					<span class="span-label" id="basic-addon1">Título</span>
-					<input type="text" id="title" class="form-control"aria-describedby="basic-addon1"/>
+					<input type="text" id="title" placeholder="Título" class="input-postagem"aria-describedby="basic-addon1"/><br>
 
-					<span class="span-label" id="basic-addon1">Autor</span>
-					<input type="text" id="author" class="form-control" aria-describedby="basic-addon2"/>
+					<input type="text" id="author" placeholder="Autor" class="input-postagem" aria-describedby="basic-addon2"/><br>
 
-					<span class="span-label" id="basic-addon1">Data</span>
-					<input type="text" id="publishedDate" class="form-control" aria-label="Data de publicação"/>
+					<input type="text" id="publishedDate" placeholder="Data de Publicação" class="input-postagem" aria-label="Data de publicação"/><br>
 				</div>
 
 				<div class="div-postagem" id="event-options">
-					<span class='span-label' id='basic-addon1'>Data do Evento</span>
-					<input type='text' id='eventDate' class='form-control' aria-label='Data do Evento'/>
+					<input type='text' id='eventDate' placeholder="Data do Evento" class='input-postagem' aria-label='Data do Evento'/><br>
 
-					<span class='span-label' id='basic-addon1'>Local do Evento</span>
-					<input type='text' id='eventPlace' class='form-control' aria-label='Local do Evento'/>
+					<input type='text' id='eventPlace' placeholder="Local do Evento" class='input-postagem' aria-label='Local do Evento'/><br>
 				</div>
 				</style>
 				<div class="div-postagem">
-					<span class="span-label" id="basic-addon1">Conteúdo</span>
-					<input type="text" id="description" class="form-control" aria-label="texto da postagem"/>
+					<textarea type="text" id="description" placeholder="Conteúdo" class="textarea-postagem" aria-label="texto da postagem"></textarea><br>
 				</div>
 
 				<div class="div-postagem">
-					<span class="span-label" id="basic-addon1">Enviar</span>
-					<input type="submit" onclick="EnviarPost()" class="form-control"aria-describedby="basic-addon3"/>
+					<input type="submit" onclick="EnviarPost()" value="Enviar" class="input-postagem"aria-describedby="basic-addon3"/>
 				</div>
 			</div>
 		</div>
