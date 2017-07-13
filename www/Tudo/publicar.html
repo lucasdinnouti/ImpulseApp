@@ -44,7 +44,7 @@
 					function addDay(selectObject){
 						var opt = selectObject.value;
 						if (opt == 'Schedule') {
-							document.getElementById('event-options').style.display = 'inline';
+							document.getElementById('event-options').style.display = 'inherit';
 						}else{
 							document.getElementById('event-options').style.display = 'none'
 						};
@@ -71,7 +71,6 @@
 				<style type="text/css">
 					div#event-options{
 						display: none;
-						height: 0px;
 					}
 				</style>
 				<div class="input-group">
@@ -82,17 +81,6 @@
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Enviar</span>
 					<input type="submit" onclick="EnviarPost()" class="form-control"aria-describedby="basic-addon3"/>
-					
-					<script type="text/javascript">
-						function addDay(selectObject){
-							var opt = selectObject.value;
-							if (opt == 'Schedule') {
-								document.getElementById('event-options').style.display = 'inline';
-							}else{
-								document.getElementById('event-options').style.display = 'none'
-							};
-						} 
-					</script>
 				</div>
 			</div>
 		</div>
