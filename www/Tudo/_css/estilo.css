@@ -15,14 +15,14 @@ body{
 
 /*Edição da Publicação*/
 .div-publicacao{
-  border: .4vh black solid;
-  margin-bottom: .5vh;
-  padding-left: 1vh;
+  background-color: #bbb;
+  margin-bottom: 2.5vh;
+  padding: 1vh;
 }
-  .div-publicacao-cabecalho{
-    font-family: 'Amiko', 700;
-  }
+  .div-publicacao-cabecalho{}
   .h3-publicacao-titulo{
+    font-family: 'Amiko', sans-serif;
+    font-weight: 700;
     margin-top: 1vh;
     font-size: 1.4em;
   }
@@ -30,11 +30,12 @@ body{
     .div-publicacao-corpo p{text-indent: 0px;}
     #conteudo{
       font-family: 'Amiko', sans-serif;
+      font-weight: 400;
       font-size: 1.1em;
     }
     #data{
       color: #888;
-      font-family: 'Amiko', 700;
+      font-family: 'Amiko', sans-serif;
       font-weight: 700;
       font-size: .8em;
     }
@@ -64,6 +65,14 @@ div#public_page p{
 /*Fim da Edição*/
 
 /*Edição do Pedidos*/
+.div-postar{
+  display: block;
+}
+
+
+div#event-options{
+  display: none;
+}
 
 div#question_page{
     background-color: #eeeeee;

@@ -4,7 +4,7 @@
 // class XMLHttpRequest()
 function Atualizar(tipoDePostagem) {
 	var div_debug = document.createElement("div");
-	div_debug.innerHTML = "<br>" +tipoDePostagem ;
+	div_debug.innerHTML += "<br>" +tipoDePostagem ;
 	document.getElementById("public_page").appendChild(div_debug);
 	var http = new XMLHttpRequest();
 	var url = "http://bookshelf.impulse-157223.appspot.com/request?postType="+tipoDePostagem;

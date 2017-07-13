@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="_css/estilo.css">
 		<meta charset="utf-8"/>
 		<script type="text/javaScript" src="_script/script.js"></script>
 	</head>
@@ -39,7 +40,7 @@
 					<option value="Schedule"> Evento </option>
 					<option value="Survey" disabled="true"> Enquete </option>
 					<option value="File" disabled="true"> Arquivo </option>
-				</select> 
+				</select>
 				<script type="text/javascript">
 					function addDay(selectObject){
 						var opt = selectObject.value;
@@ -48,38 +49,34 @@
 						}else{
 							document.getElementById('event-options').style.display = 'none'
 						};
-					} 
+					}
 				</script>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Título</span>
+				<div class="div-postagem">
+					<span class="span-label" id="basic-addon1">Título</span>
 					<input type="text" id="title" class="form-control"aria-describedby="basic-addon1"/>
 
-					<span class="input-group-addon" id="basic-addon1">Autor</span>
+					<span class="span-label" id="basic-addon1">Autor</span>
 					<input type="text" id="author" class="form-control" aria-describedby="basic-addon2"/>
 
-					<span class="input-group-addon" id="basic-addon1">Data</span>
+					<span class="span-label" id="basic-addon1">Data</span>
 					<input type="text" id="publishedDate" class="form-control" aria-label="Data de publicação"/>
 				</div>
 
-				<div class="input-group" id="event-options">
-					<span class='input-group-addon' id='basic-addon1'>Data do Evento</span>
+				<div class="div-postagem" id="event-options">
+					<span class='span-label' id='basic-addon1'>Data do Evento</span>
 					<input type='text' id='eventDate' class='form-control' aria-label='Data do Evento'/>
 
-					<span class='input-group-addon' id='basic-addon1'>Local do Evento</span>
+					<span class='span-label' id='basic-addon1'>Local do Evento</span>
 					<input type='text' id='eventPlace' class='form-control' aria-label='Local do Evento'/>
 				</div>
-				<style type="text/css">
-					div#event-options{
-						display: none;
-					}
 				</style>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Conteúdo</span>
+				<div class="div-postagem">
+					<span class="span-label" id="basic-addon1">Conteúdo</span>
 					<input type="text" id="description" class="form-control" aria-label="texto da postagem"/>
 				</div>
 
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Enviar</span>
+				<div class="div-postagem">
+					<span class="span-label" id="basic-addon1">Enviar</span>
 					<input type="submit" onclick="EnviarPost()" class="form-control"aria-describedby="basic-addon3"/>
 				</div>
 			</div>
