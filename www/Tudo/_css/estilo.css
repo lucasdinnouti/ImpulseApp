@@ -1,17 +1,44 @@
+/*font-family: 'Yatra One', cursive;*/
+@import url('https://fonts.googleapis.com/css?family=Yatra+One');
+/*font-family: 'Amiko', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Amiko:400,700');
+/*font-family: 'Ubuntu', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/*font-family: 'Comfortaa', cursive;*/
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 body{
     background: url(_media/fundo-4.jpg);
     font-family: calibri;
-    font-size: 12;
-    font-weight: 100;
     color: black;
     background-color: white;
 }
 
-p
-{
-    text-indent: 40px;
-}
 /*Edição da Publicação*/
+.div-publicacao{
+  border: .4vh black solid;
+  border-radius: 1vh;
+  margin-bottom: .5vh;
+  padding-left: 1vh;
+}
+  .div-publicacao-cabecalho{
+    font-family: 'Amiko', 700;
+  }
+  .h3-publicacao-titulo{
+    margin-top: 1vh;
+    font-size: 1.4em;
+  }
+  .div-publicacao-corpo{}
+    .div-publicacao-corpo p{text-indent: 0px;}
+    #conteudo{
+      font-family: 'Amiko', sans-serif;
+      font-size: 1.1em;
+    }
+    #data{
+      color: #888;
+      font-family: 'Amiko', 700;
+      font-weight: 700;
+      font-size: .8em;
+    }
 
 div#public_page{
     float: none;
@@ -33,7 +60,7 @@ div#public_page h2{
 }
 
 div#public_page p{
-    font-size: 15px;
+
 }
 
 /*Fim da Edição*/
@@ -97,7 +124,6 @@ h3#public_date{
 }
 p#public_content{
   text-indent: 0px;
-  font-size: 30px;
 }
 /*Fim da edição*/
 

@@ -31,18 +31,18 @@ function Atualizar(tipoDePostagem) {
 				var date_data = json[i].publishedDate;
 				var content_data = json[i].description;
 
-				
-				document.getElementById("public_page").innerHTML += 
-				" <div class='panel panel-default'> " +
-				"   <div class='panel-heading'> " +
-				" 	<h3 class='panel-title'>" + title_data + " <small>- " + author_data + "</small></h3> " +
+
+				document.getElementById("public_page").innerHTML +=
+				" <div class='div-publicacao'> " +
+				"   <div class='div-publicacao-cabecalho'> " +
+				" 	<h3 class='h3-publicacao-titulo'>" + title_data + " | " + author_data + "</h3>" +
 				"   </div> " +
-				"   <div class='panel-body'> " +
+				"   <div class='div-publicacao-corpo'><p id='conteudo'>" +
 				" 	" + content_data +
-				" 	<br><br><small> Publicado em " + date_data + "</small>"
+				" 	</p><p id='data'>Publicado em " + date_data + "</p>"
 				"   </div> " +
 				" </div> ";
-				
+
 //				//Cria  a publicação na página
 //				var div_principal = document.getElementById("public_page");
 //				var div_publicacao = document.createElement("div");
@@ -54,7 +54,7 @@ function Atualizar(tipoDePostagem) {
 //				var date_text = document.createTextNode(date_data);
 //				var content_element = document.createElement("p");
 //				var content_text = document.createTextNode(content_data);
-				
+
 //				div_publicacao.id = "public";
 //				title_element.id = "public_title";
 //				author_element.id = "public_author";
@@ -74,7 +74,6 @@ function Atualizar(tipoDePostagem) {
 		}
 
 	}
-
 	//Envia o Pedido
 	http.send();
 }
