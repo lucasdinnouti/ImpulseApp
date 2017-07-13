@@ -9,7 +9,7 @@
 			<div class="panel-heading">
 				Postagem simples
 			</div>
-			<div class="panel-body">
+			<div class="panel-body" id="post-simples">
 				<!--        Estilo formulário de PHP
 <form action="http://bookshelf.impulse-157223.appspot.com/createSchedule" method="post">
 <div class="input-group">
@@ -34,6 +34,22 @@
 </div>
 </form>
 -->
+				<select id="kind" onchange="addDay(this)">
+					<option value="Default"> Padrão </option>
+					<option value="Schedule"> Evento </option>
+					<option value="Survey" disabled="true"> Enquete </option>
+					<option value="File" disabled="true"> Arquivo </option>
+				</select> 
+				<script type="text/javascript">
+					function addDay(selectObject){
+						var opt = selectObject.value;
+						if (opt == 'Schedule') {
+							document.getElementById('event-options').style.display = 'inline';
+						}else{
+							document.getElementById('event-options').style.display = 'none'
+						};
+					} 
+				</script>
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Título</span>
 					<input type="text" id="title" class="form-control"aria-describedby="basic-addon1"/>
@@ -45,6 +61,19 @@
 					<input type="text" id="publishedDate" class="form-control" aria-label="Data de publicação"/>
 				</div>
 
+				<div class="input-group" id="event-options">
+					<span class='input-group-addon' id='basic-addon1'>Data do Evento</span>
+					<input type='text' id='eventDate' class='form-control' aria-label='Data do Evento'/>
+
+					<span class='input-group-addon' id='basic-addon1'>Local do Evento</span>
+					<input type='text' id='eventPlace' class='form-control' aria-label='Local do Evento'/>
+				</div>
+				<style type="text/css">
+					div#event-options{
+						display: none;
+						height: 0px;
+					}
+				</style>
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Conteúdo</span>
 					<input type="text" id="description" class="form-control" aria-label="texto da postagem"/>
@@ -53,12 +82,17 @@
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Enviar</span>
 					<input type="submit" onclick="EnviarPost()" class="form-control"aria-describedby="basic-addon3"/>
-					<select id="kind">
-						<option value="Default"> Padrão </option>
-						<option value="Schedule"> Evento </option>
-						<option value="Survey" disabled="true"> Enquete </option>
-						<option value="File" disabled="true"> Arquivo </option>
-					</select>
+					
+					<script type="text/javascript">
+						function addDay(selectObject){
+							var opt = selectObject.value;
+							if (opt == 'Schedule') {
+								document.getElementById('event-options').style.display = 'inline';
+							}else{
+								document.getElementById('event-options').style.display = 'none'
+							};
+						} 
+					</script>
 				</div>
 			</div>
 		</div>
