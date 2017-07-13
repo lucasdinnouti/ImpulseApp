@@ -74,7 +74,6 @@ function Atualizar(tipoDePostagem) {
 		}
 
 	}
-
 	//Envia o Pedido
 	http.send();
 }
