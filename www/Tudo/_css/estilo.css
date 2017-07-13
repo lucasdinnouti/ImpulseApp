@@ -16,7 +16,6 @@ body{
 /*Edição da Publicação*/
 .div-publicacao{
   border: .4vh black solid;
-  border-radius: 1vh;
   margin-bottom: .5vh;
   padding-left: 1vh;
 }
@@ -45,7 +44,6 @@ div#public_page{
     width: 85%;
     margin: 5%;
     padding: 2%;
-    background-color: #eeeeee;
     overflow: hidden;
 }
 
