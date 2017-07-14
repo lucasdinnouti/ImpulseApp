@@ -65,15 +65,58 @@ function toDataURL(url, callback) {
   xhr.send();
 }
 
+function sendImage(imageUrl)
+{
+	var file = {
+        dom    : imageUrl,
+        binary : null
+      };
+	
+	// Use the FileReader API to access file content
+	var reader = new FileReader();
+	// Because FileReader is asynchronous, store its
+	// result when it finishes to read the file
+	reader.addEventListener("load", function () {
+		file.binary = reader.result;
+		// At page load, if a file is already selected, read it.
+
+		reader.readAsBinaryString(imageUrl);
+
+		// To construct our multipart form data request,
+		// We need an XMLHttpRequest instance
+		var XHR = new XMLHttpRequest();
+
+		// Define what happens on successful data submission
+		XHR.addEventListener('load', function(event) {
+		  alert('Yeah! Data sent and response loaded.');
+		});
+
+		// Define what happens in case of error
+		XHR.addEventListener('error', function(event) {
+		  alert('Oups! Something went wrong.');
+		});
+
+		// Set up our request
+		XHR.open('POST', 'https://example.com/cors.php');
+
+		// Add the required HTTP header to handle a multipart form data POST request
+		XHR.setRequestHeader('Content-Type','multipart/form-data');
+
+		// And finally, send our data.
+		XHR.send(file.binary);
+	});
+}
 
 function EnviarPost()
 {
+	alert("Entrou pelo menos");
 	var title = document.getElementById("title").value;
 	var author = document.getElementById("author").value;
 	var publishedDate = document.getElementById("publishedDate").value;
 	var description = document.getElementById("description").value;
 	var imageUrl = document.getElementById("imageUrl").value;
 	var dataUrl;
+	//var imageBlobKey = sendImage(imageUrl);
 
 	toDataURL(imageUrl, function(dataUrl) {
 		console.log('RESULT:', dataUrl)

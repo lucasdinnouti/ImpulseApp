@@ -74,6 +74,11 @@
           <spam class="label label-primary" id="basic-addon1">CONTEÚDO</spam>
           <input type="text" id="description" name="nConteudo" class="form-control" aria-describedby="basic-addon1">
         </div>
+		<div class="input-group" id="event-options3">
+          <label for="nImagem" class="sr-only"></label>
+          <span class="label label-primary" id="basic-addon">IMAGEM</span>
+          <input type="file" id="imageUrl" name="nImagem" class="form-control" aria-describedby="basic-addon1">
+        </div>
         <br>
         <legend id="event-options">Informações de Evento</legend>
         <!-- input de data de evento -->
@@ -88,6 +93,7 @@
           <span class="label label-primary" id="basic-addon">LOCAL</span>
           <input type="text" id="place" name="nLocalEvento" class="form-control" aria-describedby="basic-addon1">
         </div>
+		
 				<!-- input submit -->
 				<br><br>
 				<input type="submit" onclick="EnviarPost()" name="nPublicar" value="Publicar" class="btn btn-primary">
