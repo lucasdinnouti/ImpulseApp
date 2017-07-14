@@ -4,11 +4,11 @@
 // class XMLHttpRequest()
 function Atualizar(tipoDePostagem) {
 	var div_debug = document.createElement("div");
-	div_debug.innerHTML = "<br>" +tipoDePostagem ;
+	div_debug.innerHTML += "<br>" +tipoDePostagem ;
 	document.getElementById("public_page").appendChild(div_debug);
 	var http = new XMLHttpRequest();
-//	var url = "http://bookshelf.impulse-157223.appspot.com/request?postType="+tipoDePostagem;
-	var url = "http://localhost:8080/request?postType="+tipoDePostagem;
+	var url = "http://bookshelf.impulse-157223.appspot.com/request?postType="+tipoDePostagem;
+//	var url = "http://localhost:8080/request?postType="+tipoDePostagem;
 	var response_data;
 
 	//Abre a url no obrjeto http
@@ -42,34 +42,6 @@ function Atualizar(tipoDePostagem) {
 				" 	</p><p id='data'>Publicado em " + date_data + "</p>"
 				"   </div> " +
 				" </div> ";
-
-//				//Cria  a publicação na página
-//				var div_principal = document.getElementById("public_page");
-//				var div_publicacao = document.createElement("div");
-//				var title_element = document.createElement("h1");
-//				var title_text = document.createTextNode(title_data);
-//				var author_element = document.createElement("h2");
-//				var author_text = document.createTextNode(author_data);
-//				var date_element = document.createElement("h3");
-//				var date_text = document.createTextNode(date_data);
-//				var content_element = document.createElement("p");
-//				var content_text = document.createTextNode(content_data);
-
-//				div_publicacao.id = "public";
-//				title_element.id = "public_title";
-//				author_element.id = "public_author";
-//				date_element.id = "public_date";
-//				content_element.id = "public_content";
-//
-//				title_element.appendChild(title_text);
-//				author_element.appendChild(author_text);
-//				date_element.appendChild(date_text);
-//				content_element.appendChild(content_text);
-//				div_publicacao.appendChild(title_element);
-//				div_publicacao.appendChild(author_element);
-//				div_publicacao.appendChild(date_element);
-//				div_publicacao.appendChild(content_element);
-//				div_principal.appendChild(div_publicacao);
 			}
 		}
 	}
@@ -138,8 +110,8 @@ function EnviarPost()
 		var kindSelected = kinds.options[kinds.selectedIndex].value;
 
 		var http = new XMLHttpRequest();
-//		var url = "http://bookshelf.impulse-157223.appspot.com/";
-		var url = "http://localhost:8080/";
+		var url = "http://bookshelf.impulse-157223.appspot.com/";
+//		var url = "http://localhost:8080/";
 
 		switch (kindSelected){
 			case "Default":

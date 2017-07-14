@@ -1,91 +1,97 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-		<meta charset="utf-8"/>
-		<script type="text/javaScript" src="_script/script.js"></script>
-	</head>
-	<body>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				Postagem simples
-			</div>
-			<div class="panel-body" id="post-simples">
-				<!--        Estilo formulário de PHP
-<form action="http://bookshelf.impulse-157223.appspot.com/createSchedule" method="post">
-<div class="input-group">
-<span class="input-group-addon" id="basic-addon1">Título</span>
-<input type="text" name="title" class="form-control"aria-describedby="basic-addon1">
-
-<span class="input-group-addon" id="basic-addon1">Autor</span>
-<input type="text" name="author" class="form-control" aria-describedby="basic-addon2">
-
-<span class="input-group-addon" id="basic-addon1">Data</span>
-<input type="text" name="publishedDate" class="form-control" aria-label="Data de publicação">
-</div>
-
-<div class="input-group">
-<span class="input-group-addon" id="basic-addon1">Conteúdo</span>
-<input type="text" name="description" class="form-control" aria-label="texto da postagem">
-</div>
-
-<div class="input-group">
-<label for="basic-url">Postar</label>
-<input type="submit" class="form-control"aria-describedby="basic-addon3">
-</div>
-</form>
--->
-				<select id="kind" onchange="addDay(this)">
-					<option value="Default"> Padrão </option>
-					<option value="Schedule"> Evento </option>
-					<option value="Survey" disabled="true"> Enquete </option>
-					<option value="File" disabled="true"> Arquivo </option>
-				</select> 
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="_css/estilo.css">
+    <script type="text/javaScript" src="_script/script.js"></script>
+  </head>
+  <body>
+		<style media="screen">
+			body{
+				overflow:auto;
+			}
+			#event-options{
+				display: none;
+			}
+			#event-options2{
+				display: none;
+			}
+			#event-options3{
+					display: none;
+				}
+		</style>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1>Escrever Publicação</h1>
+      </div>
+      <div class="panel-body">
+      <legend>Informações de Publicação</legend>
+			<!-- select de tipo de publicação -->
+			<select id="kind" onchange="addDay(this)" class="form-control" name="nTipo">
+				<option value="Default"> Publicação Padrão </option>
+				<option value="Schedule"> Publicação de Evento </option>
+				<option value="Survey" disabled="true"> Publicação de Enquete </option>
+				<option value="File" disabled="true"> Publicação de Arquivo </option>
 				<script type="text/javascript">
-					function addDay(selectObject){
-						var opt = selectObject.value;
-						if (opt == 'Schedule') {
-							document.getElementById('event-options').style.display = 'inherit';
-						} else {
-							document.getElementById('event-options').style.display = 'none'
-						};
-					} 
+				function addDay(selectObject){
+					var opt = selectObject.value;
+					if (opt == 'Schedule') {
+						document.getElementById('event-options').style.display = 'inherit';
+						document.getElementById('event-options2').style.display = 'inherit';
+						document.getElementById('event-options3').style.display = 'inherit';
+					}else{
+						document.getElementById('event-options').style.display = 'none';
+						document.getElementById('event-options2').style.display = 'none';
+						document.getElementById('event-options3').style.display = 'none';
+					};
+				}
 				</script>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Título</span>
-					<input type="text" id="title" class="form-control"aria-describedby="basic-addon1"/>
+			</select>
+			<br>
+        <!-- input de título -->
+        <div class="input-group">
+          <label for="nNome" class="sr-only"></label>
+          <spam class="label label-primary" id="basic-addon1">TÍTULO</spam>
 
-					<span class="input-group-addon" id="basic-addon1">Autor</span>
-					<input type="text" id="author" class="form-control" aria-describedby="basic-addon2"/>
-
-					<span class="input-group-addon" id="basic-addon1">Data</span>
-					<input type="text" id="publishedDate" class="form-control" aria-label="Data de publicação"/>
-				</div>
-
-				<div class="input-group" id="event-options">
-					<span class='input-group-addon' id='basic-addon1'>Data do Evento</span>
-					<input type='text' id='eventDate' class='form-control' aria-label='Data do Evento'/>
-
-					<span class='input-group-addon' id='basic-addon1'>Local do Evento</span>
-					<input type='text' id='eventPlace' class='form-control' aria-label='Local do Evento'/>
-				</div>
-				<style type="text/css">
-					div#event-options{
-						display: none;
-					}
-				</style>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Conteúdo</span>
-					<input type="text" id="description" class="form-control" aria-label="texto da postagem"/>
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Arquivo</span>
-					<input type="file" id="imageUrl" class="form-control" aria-label="texto da postagem"/>
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Enviar</span>
-					<input type="submit" onclick="EnviarPost()" class="form-control"aria-describedby="basic-addon3"/>
-				</div>
-			</div>
-		</div>
-	</body>
+          <input type="text" id="title" name="nNome" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <!-- input de autor -->
+        <div class="input-group">
+          <label for="nAuthor" class="sr-only"></label>
+          <spam class="label label-primary" id="basic-addon1">AUTOR</spam>
+          <input type="text" id="author" name="nAutor" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <!-- input de data de publicação -->
+        <div class="input-group">
+          <label for="nDataPublicacao" class="sr-only"></label>
+          <spam class="label label-primary" id="basic-addon1">DATA</spam>
+          <input type="text" id="publishedDate" name="nDataPublicacao" class="form-control" aria-describedby="basic-addon1">
+        </div>
+				<!-- input de data de publicação -->
+        <div class="input-group">
+          <label for="nConteudo" class="sr-only"></label>
+          <spam class="label label-primary" id="basic-addon1">CONTEÚDO</spam>
+          <input type="text" id="description" name="nConteudo" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <br>
+        <legend id="event-options">Informações de Evento</legend>
+        <!-- input de data de evento -->
+        <div class="input-group" id="event-options2">
+          <label for="nDataEvento" class="sr-only"></label>
+          <span class="label label-primary" id="basic-addon1">DATA</span>
+          <input type="text" id="dateAndTime" name="nDataEvento" class="form-control" aria-describedby="basic-addon1">
+        </div>
+        <!-- input de local do evento -->
+        <div class="input-group" id="event-options3">
+          <label for="nLocalEvento" class="sr-only"></label>
+          <span class="label label-primary" id="basic-addon">LOCAL</span>
+          <input type="text" id="place" name="nLocalEvento" class="form-control" aria-describedby="basic-addon1">
+        </div>
+				<!-- input submit -->
+				<br><br>
+				<input type="submit" onclick="EnviarPost()" name="nPublicar" value="Publicar" class="btn btn-primary">
+      </div>
+    </div>
+  </body>
 </html>
