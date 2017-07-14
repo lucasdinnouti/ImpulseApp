@@ -5,7 +5,7 @@
 
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</head>
-	<body>
+	<body onkeydown="esconderMenu()">
 		<div id="side-menu" onblur="esconderMenu()" tabindex="0">
 			<ul class="nav nav-pills nav-justified">
 				<li><a style="inherith" href="Tudo/publicacoes.html" target="corpo" onclick="esconderMenu()">Postagens</a></li>
@@ -19,16 +19,18 @@
 				<button onclick="moverMenu()">Menu</button>
 			</div>
 		</div>
-		<iframe height="85%" width="100%" name="corpo">
+		<iframe height="85%" width="100%" name="corpo"">
 
 		</iframe>
 
 		<script type="text/javascript">
 			function moverMenu(){
+				menu = true;
 				document.getElementById('side-menu').style.left = '0%';
 				document.getElementById('side-menu').focus();
 			}
 			function esconderMenu(){
+				menu = false;
 				document.getElementById('side-menu').style.left = '-50%';
 			}
 		</script>
