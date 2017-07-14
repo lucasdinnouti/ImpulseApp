@@ -98,12 +98,21 @@ function sendImage(imageUrl)
 
 		// Set up our request
 		XHR.open('POST', 'https://example.com/cors.php');
-
+		
+		var blobKey = null;
+		
 		// Add the required HTTP header to handle a multipart form data POST request
 		XHR.setRequestHeader('Content-Type','multipart/form-data');
+		if ((http.readyState == 4) && (http.status == 200)) {
+				blobKey = http.responseText;
+				if (blobKey == "NOTOK")
+					alert("Houve um erro na postagem, tente novamente mais tarde.")
+				console.log(blobKey);
+			}
 
 		// And finally, send our data.
 		XHR.send(file.binary);
+		return blobKey;
 	});
 }
 
@@ -116,7 +125,7 @@ function EnviarPost()
 	var description = document.getElementById("description").value;
 	var imageUrl = document.getElementById("imageUrl").value;
 	var dataUrl;
-	//var imageBlobKey = sendImage(imageUrl);
+	var imageBlobKey = sendImage(imageUrl);
 
 	toDataURL(imageUrl, function(dataUrl) {
 		console.log('RESULT:', dataUrl)
@@ -125,7 +134,7 @@ function EnviarPost()
 		"author": author,
 		"publishedDate": publishedDate,
 		"description": description,
-		"imageUrl": dataUrl});
+		"imageUrl": imageBlobKey});
 
 		alert(dataUrl);
 
