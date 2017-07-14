@@ -1,33 +1,28 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="_css/estilo.css">
-		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css"/>
-		<meta charset="utf-8"/>
-		<script>
-
-		</script>
-	</head>
-	<script type="text/javascript" src= "_script/script.js"></script>
-	<body>
-		<div id="public_page">
-			<div class="btn-group" role="group" aria-label="...">
-				<button type="button" name="button" class="btn btn-default" onclick="Atualizar('SCHEDULE')">Eventos</button>
-				<button type="button" name="button" class="btn btn-default" onclick="Atualizar('BOOK')">Estrôncio</button>
-			</div>
-			<ul class="media-list">
-				<li class="media">
-					<div class="media-left">
-						<a href="#">
-							<span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-						</a>
-					</div>
-					<div class="media-body">
-						<h4 class="media-heading">Título <small>autor</small></h4>
-						Sample text sample text sample text sample text sample text sample text sample text
-						<small> sampleDay/sampleMonth/sampleYear</small>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css"/>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src= "_script/script.js"></script>
+  </head>
+  <body>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1>Publicações</h1>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default" onclick="Atualizar('BOOK')">Publicações</button>
+          <button type="button" class="btn btn-default" onclick="Atualizar('SCHEDULE')">Eventos</button>
+        </div>
+      </div>
+      <div class="pannel-body" id="corpo">
+        <div>
+            <legend>Título | autor</legend>
+            <p> Contúdo Contúdo Contúdo Contúdo Contúdo<br>
+            Contúdo Contúdo Contúdo Contúdo Contúdo<br>
+            Contúdo Contúdo Contúdo Contúdo Contúdo</p>
+            <small>dd/mm/aa</small>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

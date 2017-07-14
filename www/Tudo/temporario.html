@@ -1,61 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="_css/estilo.css">
-    <script type="text/javaScript" src="_script/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css"/>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src= "_script/script.js"></script>
   </head>
   <body>
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h1>Escrever Publicação</h1>
+        <h1>Publicações</h1>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default" onclick="Atualizar('BOOK')">Publicações</button>
+          <button type="button" class="btn btn-default" onclick="Atualizar('SCHEDULE')">Eventos</button>
+        </div>
       </div>
-      <div class="panel-body">
-      <legend>Informações de Publicação</legend>
-        <!-- input de título -->
-        <div class="input-group">
-          <label for="nNome" class="sr-only"></label>
-          <spam class="label label-primary" id="basic-addon1">TÍTULO</spam>
-          <input type="text" id="title" name="nNome" class="form-control" aria-describedby="basic-addon1">
+      <div class="pannel-body" id="corpo">
+        <div>
+            <legend>Título | autor</legend>
+            <p> Contúdo Contúdo Contúdo Contúdo Contúdo<br>
+            Contúdo Contúdo Contúdo Contúdo Contúdo<br>
+            Contúdo Contúdo Contúdo Contúdo Contúdo</p>
+            <small>dd/mm/aa</small>
         </div>
-        <!-- input de autor -->
-        <div class="input-group">
-          <label for="nAuthor" class="sr-only"></label>
-          <spam class="label label-primary" id="basic-addon1">AUTOR</spam>
-          <input type="text" id="author" name="nAutor" class="form-control" aria-describedby="basic-addon1">
-        </div>
-        <!-- input de data de publicação -->
-        <div class="input-group">
-          <label for="nDataPublicacao" class="sr-only"></label>
-          <spam class="label label-primary" id="basic-addon1">DATA</spam>
-          <input type="text" id="publishedDate" name="nDataPublicacao" class="form-control" aria-describedby="basic-addon1">
-        </div>
-        <br>
-        <legend>Informações de Evento</legend>
-        <!-- input de data de evento -->
-        <div class="input-group" id="event-options">
-          <label for="nDataEvento" class="sr-only"></label>
-          <span class="label label-primary" id="basic-addon1">DATA</span>
-          <input type="text" id="eventDate" name="nDataEvento" class="form-control" aria-describedby="basic-addon1">
-        </div>
-        <!-- input de local do evento -->
-        <div class="input-group" id="event-options">
-          <label for="nLocalEvento" class="sr-only"></label>
-          <span class="label label-primary" id="basic-addon">LOCAL</span>
-          <input type="text" id="eventPlace" name="nLocalEvento" class="form-control" aria-describedby="basic-addon1">
-        </div>
-        <br>
-        <!-- input submit -->
-        <input type="submit" name="nPublicar" value="Publicar" class="btn btn-primary">
-        <br>
-        <!-- select de tipo de publicação -->
-        <select class="form-control" name="nTipo">
-          <option value="Default"> Publicação Padrão </option>
-          <option value="Schedule"> Publicação de Evento </option>
-          <option value="Survey" disabled="true"> Publicação de Enquete </option>
-          <option value="File" disabled="true"> Publicação de Arquivo </option>
-        </select>
       </div>
     </div>
   </body>

@@ -5,7 +5,7 @@
 function Atualizar(tipoDePostagem) {
 	var div_debug = document.createElement("div");
 	div_debug.innerHTML += "<br>" +tipoDePostagem ;
-	document.getElementById("public_page").appendChild(div_debug);
+	document.getElementById("corpo").appendChild(div_debug);
 	var http = new XMLHttpRequest();
 	var url = "http://bookshelf.impulse-157223.appspot.com/request?postType="+tipoDePostagem;
 //	var url = "http://localhost:8080/request?postType="+tipoDePostagem;
@@ -32,7 +32,7 @@ function Atualizar(tipoDePostagem) {
 				var content_data = json[i].description;
 
 
-				document.getElementById("public_page").innerHTML +=
+				document.getElementById("corpo").innerHTML +=
 				" <div class='div-publicacao'> " +
 				"   <div class='div-publicacao-cabecalho'> " +
 				" 	<h3 class='h3-publicacao-titulo'>" + title_data + " | " + author_data + "</h3>" +
