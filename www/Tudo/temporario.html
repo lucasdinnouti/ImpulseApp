@@ -7,53 +7,16 @@
     <script type="text/javaScript" src="_script/script.js"></script>
   </head>
   <body>
-		<style media="screen">
-			body{
-				overflow:auto;
-			}
-			#event-options{
-				display: none;
-			}
-			#event-options2{
-				display: none;
-			}
-			#event-options3{
-					display: none;
-				}
-		</style>
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h1>Escrever Publicação</h1>
       </div>
       <div class="panel-body">
       <legend>Informações de Publicação</legend>
-			<!-- select de tipo de publicação -->
-			<select id="kind" onchange="addDay(this)" class="form-control" name="nTipo">
-				<option value="Default"> Publicação Padrão </option>
-				<option value="Schedule"> Publicação de Evento </option>
-				<option value="Survey" disabled="true"> Publicação de Enquete </option>
-				<option value="File" disabled="true"> Publicação de Arquivo </option>
-				<script type="text/javascript">
-				function addDay(selectObject){
-					var opt = selectObject.value;
-					if (opt == 'Schedule') {
-						document.getElementById('event-options').style.display = 'inherit';
-						document.getElementById('event-options2').style.display = 'inherit';
-						document.getElementById('event-options3').style.display = 'inherit';
-					}else{
-						document.getElementById('event-options').style.display = 'none';
-						document.getElementById('event-options2').style.display = 'none';
-						document.getElementById('event-options3').style.display = 'none';
-					};
-				}
-				</script>
-			</select>
-			<br>
         <!-- input de título -->
         <div class="input-group">
           <label for="nNome" class="sr-only"></label>
           <spam class="label label-primary" id="basic-addon1">TÍTULO</spam>
-
           <input type="text" id="title" name="nNome" class="form-control" aria-describedby="basic-addon1">
         </div>
         <!-- input de autor -->
@@ -68,29 +31,31 @@
           <spam class="label label-primary" id="basic-addon1">DATA</spam>
           <input type="text" id="publishedDate" name="nDataPublicacao" class="form-control" aria-describedby="basic-addon1">
         </div>
-				<!-- input de data de publicação -->
-        <div class="input-group">
-          <label for="nConteudo" class="sr-only"></label>
-          <spam class="label label-primary" id="basic-addon1">CONTEÚDO</spam>
-          <input type="text" id="description" name="nConteudo" class="form-control" aria-describedby="basic-addon1">
-        </div>
         <br>
-        <legend id="event-options">Informações de Evento</legend>
+        <legend>Informações de Evento</legend>
         <!-- input de data de evento -->
-        <div class="input-group" id="event-options2">
+        <div class="input-group" id="event-options">
           <label for="nDataEvento" class="sr-only"></label>
           <span class="label label-primary" id="basic-addon1">DATA</span>
           <input type="text" id="eventDate" name="nDataEvento" class="form-control" aria-describedby="basic-addon1">
         </div>
         <!-- input de local do evento -->
-        <div class="input-group" id="event-options3">
+        <div class="input-group" id="event-options">
           <label for="nLocalEvento" class="sr-only"></label>
           <span class="label label-primary" id="basic-addon">LOCAL</span>
           <input type="text" id="eventPlace" name="nLocalEvento" class="form-control" aria-describedby="basic-addon1">
         </div>
-				<!-- input submit -->
-				<br><br>
-				<input type="submit" onclick="EnviarPost()" name="nPublicar" value="Publicar" class="btn btn-primary">
+        <br>
+        <!-- input submit -->
+        <input type="submit" name="nPublicar" value="Publicar" class="btn btn-primary">
+        <br>
+        <!-- select de tipo de publicação -->
+        <select class="form-control" name="nTipo">
+          <option value="Default"> Publicação Padrão </option>
+          <option value="Schedule"> Publicação de Evento </option>
+          <option value="Survey" disabled="true"> Publicação de Enquete </option>
+          <option value="File" disabled="true"> Publicação de Arquivo </option>
+        </select>
       </div>
     </div>
   </body>
